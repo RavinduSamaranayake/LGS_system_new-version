@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component inherit-compiler-output="true" inheritJdk="true">
+	<output-test url="file://$MODULE_DIR$/out/test/LGS_Management_System"/>
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<levels>
+		<level name="sqlite-jdbc-3.23.1" value="project"/>
+		<level name="fontawesomefx-8.1" value="project"/>
+		<level name="javax.mail" value="project"/>
+		<level name="fontawesomefx-commons-8.13" value="project"/>
+		<level name="fontawesomefx-fontawesome-4.7.0-1" value="project"/>
+		<level name="controlsfx-8.40.13" value="project"/>
+		<level name="view-8.4.2" value="project"/>
+		<level name="recurrence-8.4.2" value="project"/>
+	</levels>
+</component>

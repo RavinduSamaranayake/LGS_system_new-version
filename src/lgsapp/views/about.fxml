@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="499.0" prefWidth="733.0" style="-fx-background-color: transparent;" stylesheets="@../styles.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lgsapp.controlers.AboutController">
+    <children>
+        <StackPane onMouseDragged="#dragged" onMousePressed="#pressed" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <effect>
+                <DropShadow />
+            </effect>
+            <children>
+                <HBox prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <VBox prefHeight="468.0" prefWidth="497.0" style="-fx-background-color: #2D75E8;" HBox.hgrow="ALWAYS">
+                     <children>
+                        <ImageView fx:id="img_frme" fitHeight="253.0" fitWidth="239.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../myicons/myprofile.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="9.0" prefWidth="356.0" text="Kushan Ravindu  Samaranayake                    " textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="27.0" prefWidth="403.0" text="Bsc in computer science(ug) University of colombo " textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="22.0" prefWidth="340.0" text="email: ovkravindu95@gmail.com" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="28.0" prefWidth="415.0" text="linkedin: https://www.linkedin.com/in/kushan-ravindu-b6b491148/" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                         <Label prefHeight="22.0" prefWidth="322.0" text="telno:0717411392/0915780867" textFill="WHITE" />
+                        <Label prefHeight="53.0" prefWidth="103.0" />
+
+                         <Text fx:id="to_login" onMouseClicked="#btntoback" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-font-family: Quicksand; -fx-fill: #ff3b49;" text="back to home">
+                             <HBox.margin>
+                                 <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                             </HBox.margin>
+                         </Text>
+                     </children></VBox>
+                        <VBox style="-fx-background-color: white;" HBox.hgrow="ALWAYS">
+
+                            <children>
+
+
+                                <fx:include source="title_bar.fxml" />
+
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+        </StackPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="707.0" prefWidth="1101.0" style="-fx-background-color: #FFF;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lgsapp.controlers.HomeController">
+    <children>
+
+        <VBox onMouseDragged="#dragged" onMousePressed="#pressed" style="-fx-background-color: WHITE;" HBox.hgrow="ALWAYS" />
+        <VBox layoutX="988.0" layoutY="-3.0" prefHeight="59.0" prefWidth="383.0" style="-fx-background-color:  WHITE;">
+            <children>
+
+
+                <fx:include source="title_bar.fxml" />
+            </children>
+        </VBox>
+        <Pane prefHeight="707.0" prefWidth="409.0" style="-fx-background-color: #0C39FF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+               <!-- <ImageView fitHeight="52.0" fitWidth="52.0" layoutX="75.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/icons8_Google_Wallet_50px.png" />
+                    </image>
+                </ImageView>-->
+                <Label alignment="CENTER" layoutX="-42.0" layoutY="24.0" prefHeight="23.0" prefWidth="354.0" text="Local Government" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER" layoutY="47.0" prefHeight="23.0" prefWidth="253.0" text="Secrataries Management" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI" size="12.0" />
+                    </font>
+                </Label>
+
+
+
+                <ComboBox fx:id="cmbCuryr" editable="true" layoutX="254.0" layoutY="32.0" prefHeight="32.0" prefWidth="116.0" promptText="year">
+                </ComboBox>
+                <TextField fx:id="txtFirstname" layoutX="65.0" layoutY="83.0" prefHeight="32.0" prefWidth="191.0" promptText="firstname" />
+                <TextField fx:id="txtLastname" layoutX="65.0" layoutY="119.0" prefHeight="32.0" prefWidth="191.0" promptText="lastname" />
+                <TextField fx:id="txtWOP" layoutX="65.0" layoutY="160.0" prefHeight="32.0" prefWidth="191.0" promptText="W&amp;OP number" />
+
+                <ComboBox fx:id="cmbOffice" editable="true" layoutX="65.0" layoutY="201.0" prefHeight="32.0" prefWidth="191.0" promptText="local government office">
+                </ComboBox>
+                <TextField fx:id="txtContact" layoutX="67.0" layoutY="247.0" prefHeight="32.0" prefWidth="278.0" promptText="contact number" />
+                <TextField fx:id="txtEmail" layoutX="67.0" layoutY="286.0" prefHeight="32.0" prefWidth="278.0" promptText="email" />
+                <!--<TextField fx:id="txtGender" layoutX="67.0" layoutY="242.0" prefHeight="32.0" prefWidth="278.0" promptText="Gender" />-->
+                <ComboBox fx:id="cmbGender" editable="true" layoutX="67.0" layoutY="326.0" prefHeight="32.0" prefWidth="278.0" promptText="gender">
+                </ComboBox>
+                <DatePicker fx:id="txtBirthday" layoutX="67.0" layoutY="366.0" prefHeight="32.0" prefWidth="278.0" promptText="birthday" />
+                <DatePicker fx:id="txtFirstAppdate" layoutX="67.0" layoutY="405.0" prefHeight="32.0" prefWidth="278.0" promptText="first appointment date" />
+                <DatePicker fx:id="txtUpgrading" layoutX="67.0" layoutY="444.0" prefHeight="32.0" prefWidth="278.0" promptText="upgrading date" />
+                <DatePicker fx:id="txtRetirement" layoutX="67.0" layoutY="483.0" prefHeight="32.0" prefWidth="278.0" promptText="retirement date" />
+                <DatePicker fx:id="txtIncrement" layoutX="67.0" layoutY="521.0" prefHeight="32.0" prefWidth="278.0" promptText="increment date" />
+                <CheckBox fx:id="chkPb" layoutX="69.0" layoutY="629.0" mnemonicParsing="false" text="yrbegin" textFill="WHITE" />
+                <CheckBox fx:id="chkPm" layoutX="137.0" layoutY="629.0" mnemonicParsing="false" text="yrmid" textFill="WHITE" />
+                <CheckBox fx:id="chkPe" layoutX="201.0" layoutY="629.0" mnemonicParsing="false" text="yrend" textFill="WHITE" />
+
+
+                <Button fx:id="btnCancel" layoutX="64.0" layoutY="661.0" mnemonicParsing="false" onMouseClicked="#exitTomain" prefHeight="32.0" prefWidth="61.0" styleClass="button2" stylesheets="@../fullpackstyling.css" text="Back " />
+               <!-- <Button fx:id="btnModify" layoutX="62.0" layoutY="661.0" mnemonicParsing="false" onMouseClicked="#saveInfo" prefHeight="32.0" prefWidth="72.0" styleClass="button2" stylesheets="@../fullpackstyling.css" text="Save" />-->
+                <Button fx:id="btnEdit" layoutX="222.0" layoutY="661.0" mnemonicParsing="false" onMouseClicked="#editInfo" prefHeight="32.0" prefWidth="61.0" styleClass="button2" stylesheets="@../fullpackstyling.css" text="Edit" />
+                <Button fx:id="btnDelete" layoutX="141.0" layoutY="661.0" mnemonicParsing="false" onMouseClicked="#deleteInfo" prefHeight="32.0" prefWidth="61.0" styleClass="button2" stylesheets="@../fullpackstyling.css" text="Delete" />
+                <Button fx:id="btnAdd" layoutX="312.0" layoutY="661.0" mnemonicParsing="false" onMouseClicked="#addInfo" prefHeight="32.0" prefWidth="61.0" styleClass="button2" stylesheets="@../fullpackstyling.css" text="Save" />
+                <Button fx:id="btnUpload" layoutX="284.0" layoutY="201.0" mnemonicParsing="false" onMouseClicked="#uploadPic" prefHeight="32.0" prefWidth="93.0" styleClass="button2" stylesheets="@../fullpackstyling.css" text="Change avatar" />
+                <ImageView fx:id="img_frame" fitHeight="125.0" fitWidth="136.0" layoutX="262.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true" />
+                <Label layoutX="71.0" layoutY="596.0" text="performance report " textFill="WHITE">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Label>
+                <Label layoutX="67.0" layoutY="567.0" text="salary  increment" textFill="WHITE">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <RadioButton fx:id="radioyes" layoutX="193.0" layoutY="568.0" mnemonicParsing="false" text="yes" textFill="WHITE" />
+                <RadioButton fx:id="radiono" layoutX="248.0" layoutY="568.0" mnemonicParsing="false" text="no" textFill="WHITE" />
+
+
+
+
+
+            </children>
+        </Pane>
+
+        <TableView fx:id="tblData" layoutX="421.0" layoutY="76.0" prefHeight="631.0" prefWidth="686.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="421.0" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="76.0">
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+         <columns>
+            <TableColumn fx:id="colfname" prefWidth="75.0" text="First name" />
+            <TableColumn fx:id="collname" prefWidth="75.0" text="Last name" />
+            <TableColumn fx:id="colwop" prefWidth="75.0" text="W&amp;OP number" />
+            <TableColumn fx:id="coloffice" prefWidth="75.0" text="LG office" />
+            <TableColumn fx:id="colcontact" prefWidth="75.0" text="Contact " />
+            <TableColumn fx:id="colbday" prefWidth="75.0" text="Birthday" />
+            <TableColumn fx:id="colfappdate" prefWidth="75.0" text="First apo_date" />
+            <TableColumn fx:id="colupgdate" prefWidth="75.0" text="Upgra_date" />
+            <TableColumn fx:id="colretdate" prefWidth="75.0" text="Retire_date" />
+            <TableColumn fx:id="colincdate" prefWidth="76.0" text="incre_date" />
+            <TableColumn fx:id="colinc" prefWidth="68.0" text="increment" />
+            <TableColumn fx:id="colbeg" prefWidth="27.0" text="beg" />
+            <TableColumn fx:id="colmid" prefWidth="27.0" text="mid" />
+            <TableColumn fx:id="colend" prefWidth="34.0" text="end" />
+         </columns>
+        </TableView>
+
+        <TextField fx:id="txtSearch" layoutX="855.0" layoutY="26.0" prefHeight="32.0" prefWidth="239.0" promptText="search" />
+        <TextField fx:id="txtsearchyr" layoutX="421.0" layoutY="26.0" prefHeight="32.0" prefWidth="191.0" promptText="enter year" />
+        <Button fx:id="btnLoadtable" layoutX="630.0" layoutY="26.0" mnemonicParsing="false" onMouseClicked="#go" prefHeight="32.0" prefWidth="93.0" styleClass="button2" stylesheets="@../fullpackstyling.css" text="load&gt;&gt;&gt;" />
+    </children>
+</AnchorPane>
